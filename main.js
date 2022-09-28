@@ -48,15 +48,28 @@ function nextques()
 	
 	     quesindex++;
 	     if(quesindex==tques-1)
-	     	nextbutton.textContent="Finish";
+	     	nextbutton.textContent="Avsluta";
 	     if(quesindex==tques)
 	     {
 	     q.style.display='none';
           quiz.style.display='none';
           result.style.display='';
           var final_score="<b>Resultat</b>: <br>";
+          var order = new Array(N_namnder);
+          var high_score = 0;
+          sorted_score = [...score].sort(function(a, b){return b-a})
+          for (let i = 0; i < N_namnder; i++){
+          	
+          	for (let j=0; i < N_namnder; j++){
+          		if (sorted_score[i]==score[j] && !(order.includes(j))){
+          			order[i] = j;
+          			break
+          		}
+          	}
+          }
           for (let i = 0; i < N_namnder; i++) {
-          	final_score += namnder[i] + ": " + (score[i]*100) + "%<br>";
+          	
+          	final_score += namnder[order[i]] + ": " + (sorted_score[i].toFixed(2)*100) + "%<br>";
           }
           result.innerHTML= final_score;
           console.log(final_score)
