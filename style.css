@@ -51,13 +51,13 @@ body
 	background: rgba(255,255,255,0.9);
 	margin: 10px 0 10px 10px;
 	color: #0000000;
-	border: 2px solid #c57c13; 
+	border: 2px solid #FF642b; 
 	border-radius: 5px;
 	text-align: left;
 }
 
 .option:hover{
-	background: #c57c13;
+	background: #FF642b;
 	color: #f6f6f6;	
 }
 #next
