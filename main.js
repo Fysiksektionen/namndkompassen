@@ -14,7 +14,7 @@ var nextbutton= document.getElementById("next");
 var q=document.getElementById('quit');
 
 
-var score= new Array(tques).fill(0);;
+var score= new Array(N_namnder).fill(0);;
 var quesindex=0;
 
 function give_ques(quesindex) 
@@ -30,7 +30,7 @@ give_ques(0);
 function nextques()
 {
 	var selected_ans= document.querySelectorAll('input:checked');
-	if(!selected_ans)
+	if(selected_ans.length==0)
 		{alert("Välj åtminstonde ett alternativ");return;}
 	
 	for (let i = 0; i < selected_ans.length; i++) {
@@ -51,7 +51,7 @@ function nextques()
 		  sorted_score = [...score].sort(function(a, b){return b-a})
 		  for (let i = 0; i < N_namnder; i++){
 		  	
-		  	for (let j=0; i < N_namnder; j++){
+		  	for (let j=0; j < N_namnder; j++){
 		  		if (sorted_score[i]==score[j] && !(order.includes(j))){
 		  			order[i] = j;
 		  			break
