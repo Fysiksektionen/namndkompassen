@@ -6,6 +6,9 @@ var N_namnder = namnder.length;
 // välj antalet nollskilda toppmatchningar som visas i slutet här (vid samma ranking visas alla även om det blir fler)
 var N_resultat = 5;
 
+// Text som står efter resultatet
+var sluttext = '<br>Sugen på att veta mer om någon nämnd*? Kolla <a href="https://docs.google.com/document/d/1gP65qTX5yvGZpYiMBMD_K9XyRCzFmDqCV0N7Uzu-Vdg/edit?usp=sharing", target="_blank">här</a>'
+
 var opt = new Array(tques)
 var question_order = [...Array(N_namnder).keys()]
 for (let i = 0; i < N_namnder; i++){
@@ -46,7 +49,7 @@ function nextques()
 	     quesindex++;
 	     if(quesindex==tques-1)
 	     	nextbutton.textContent="Avsluta";
-	     if(quesindex==tques){
+	     if(quesindex==tques-12){
 		  quiz.style.display='none';
 		  result.style.display='';
 		  var final_score="<b>Toppmatchning</b>: <br>";
@@ -67,7 +70,9 @@ function nextques()
 		  		final_score += namnder[order[i]] + ": " + (sorted_score[i].toFixed(2)*100) + "%<br>";
 		  	}
 		  }
-		  result.innerHTML= final_score;
+		  
+		  
+		  result.innerHTML= final_score+sluttext;
             return;
 	     }
 	shuffle(question_order);
