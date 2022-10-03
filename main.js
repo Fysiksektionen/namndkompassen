@@ -2,6 +2,10 @@ var quiz=document.getElementById("quiz");
 var ques= document.getElementById("question");
 var tques=questions.length;
 var N_namnder = namnder.length;
+
+// välj antalet nollskilda toppmatchningar som visas i slutet här (vid samma ranking visas alla även om det blir fler)
+var N_resultat = 5;
+
 var opt = new Array(tques)
 var question_order = [...Array(N_namnder).keys()]
 for (let i = 0; i < N_namnder; i++){
@@ -45,7 +49,7 @@ function nextques()
 	     if(quesindex==tques){
 		  quiz.style.display='none';
 		  result.style.display='';
-		  var final_score="<b>Resultat</b>: <br>";
+		  var final_score="<b>Toppmatchning</b>: <br>";
 		  var order = new Array(N_namnder);
 		  var high_score = 0;
 		  sorted_score = [...score].sort(function(a, b){return b-a})
@@ -59,8 +63,9 @@ function nextques()
 		  	}
 		  }
 		  for (let i = 0; i < N_namnder; i++) {
-		  	
-		  	final_score += namnder[order[i]] + ": " + (sorted_score[i].toFixed(2)*100) + "%<br>";
+		  	if (sorted_score[i]!=0 && (i<N_resultat || sorted_score[i]==sorted_score[N_resultat-1])){
+		  		final_score += namnder[order[i]] + ": " + (sorted_score[i].toFixed(2)*100) + "%<br>";
+		  	}
 		  }
 		  result.innerHTML= final_score;
             return;
