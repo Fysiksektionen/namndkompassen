@@ -1,7 +1,7 @@
 body
 {
 	font-family: 'Sans-serif';
-	background-image: url("logo_inkscape.svg");
+	background-image: url("val_banner.svg");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center; 
@@ -26,9 +26,9 @@ body
 	width: 60%;
 	position: absolute;
 	left:20%;
-	top: 30%;
+	top: 15%;
 	transform: translateX(-50) translateY(-50);
-	background: rgba(255,255,255,0.5);
+	background: rgba(255,255,255,0.7);
 	padding: 20px;
 	border: 1px solid #00038c;
 	box-shadow: 0 0 8px 3px #fff;
@@ -48,7 +48,7 @@ body
 	width: 470px;
 	display: inline-block;
 	padding: 10px 0 10px 0;
-	background: rgba(255,255,255,0.9);
+	background: rgba(255,255,255,0.95);
 	margin: 10px 0 10px 10px;
 	color: #0000000;
 	border: 2px solid #FF642b; 
