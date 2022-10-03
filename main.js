@@ -49,7 +49,7 @@ function nextques()
 	     quesindex++;
 	     if(quesindex==tques-1)
 	     	nextbutton.textContent="Avsluta";
-	     if(quesindex==tques-12){
+	     if(quesindex==tques){
 		  quiz.style.display='none';
 		  result.style.display='';
 		  var final_score="<b>Toppmatchning</b>: <br>";
