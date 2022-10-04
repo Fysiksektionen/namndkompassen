@@ -33,7 +33,7 @@ var quesindex=0;
 
 function give_ques(quesindex) 
 {
-	ques.textContent=quesindex+1+". "+questions[quesindex][0];
+	ques.innerHTML="<b>"+(quesindex+1)+". "+questions[quesindex][0]+"</b>";
 	do_radio = Number.isInteger(questions[quesindex][1]);
 	
 	for (let i = 0; i < N_namnder; i++){
