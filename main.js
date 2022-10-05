@@ -1,4 +1,5 @@
 var quiz=document.getElementById("quiz");
+var intro=document.getElementById("intro");
 var ques= document.getElementById("question");
 var tques=questions.length;
 var N_namnder = namnder.length;
@@ -59,7 +60,13 @@ function give_ques(quesindex)
 
 	 return;// body...
 };
-give_ques(0);
+function startquiz(){
+    quiz.style.display='';
+    intro.style.display='none';
+    give_ques(0);
+}
+
+
 function nextques()
 {
 	var selected_ans= document.querySelectorAll('input:checked');

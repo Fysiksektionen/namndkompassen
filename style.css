@@ -78,6 +78,24 @@ body
 #next:hover{
 	background-color:rgb(106, 90, 205)
 }
+#intro
+{
+	font-size:30px;
+	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10%;
+	width: 60%;
+	background: rgba(255,255,255,0.9);
+	padding: 20px;
+	border: 1px solid #00038c;
+	box-shadow: 0 0 8px 3px #fff;
+}
+#footnote{
+	font-size:15px;
+	text-align: left;
+}
+
 
 #result
 {
