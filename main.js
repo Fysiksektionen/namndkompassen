@@ -77,7 +77,7 @@ function nextques()
 	if(do_radio){
 	    for (let i = 0; i < N_namnder; i++) {
  		if (questions[quesindex][i]==selected_ans[0].value){
- 		    score[i]+=1/tques;
+ 		    score[i]+=1/(tques-1);
  		}
  		
 	    }
@@ -87,7 +87,7 @@ function nextques()
 	else{
 	    for (let i = 0; i < selected_ans.length; i++) {
  		namnd_index = question_order[selected_ans.item(i).value];
-		score[namnd_index]+=1/tques;
+		score[namnd_index]+=1/(tques-1);
 		selected_ans.item(i).checked=false;
 	    } 
 	
