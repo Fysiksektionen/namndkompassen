@@ -76,7 +76,8 @@ function nextques()
 	//beräkna score
 	if(do_radio){
 	    for (let i = 0; i < N_namnder; i++) {
- 		if (questions[quesindex][i]==selected_ans[0].value){
+	        console.log(selected_ans[0].value)
+ 		if (questions[quesindex][i+1]==selected_ans[0].value){
  		    score[i]+=1/tques;
  		}
  		
