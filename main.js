@@ -76,8 +76,9 @@ function nextques()
 	//beräkna score
 	if(do_radio){
 	    for (let i = 0; i < N_namnder; i++) {
- 		if (questions[quesindex][i]==selected_ans[0].value){
- 		    score[i]+=1/(tques-1);
+	        console.log(selected_ans[0].value)
+ 		if (questions[quesindex][i+1]==selected_ans[0].value){
+ 		    score[i]+=1/tques;
  		}
  		
 	    }
@@ -87,7 +88,7 @@ function nextques()
 	else{
 	    for (let i = 0; i < selected_ans.length; i++) {
  		namnd_index = question_order[selected_ans.item(i).value];
-		score[namnd_index]+=1/(tques-1);
+		score[namnd_index]+=1/tques;
 		selected_ans.item(i).checked=false;
 	    } 
 	
