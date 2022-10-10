@@ -1,50 +1,55 @@
 <!Doctype HTML>
 <html>
 <head>
-
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Nämnd*kompassen</title>
-	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" />
+    
+    <title>Nämnd*kompassen</title>
 </head>
 
 <body>
-	<div id="heading"><h1 id="text">Nämnd*kompassen<h1></div>
+	<div id="heading"><h1 id="text">Nämnd*kompassen</h1></div>
+	
 	<div id="quiz" style="display:none">
 		<div id="question"></div>
-		<label class="option"><input type="checkbox" name="option" value="0" /><span id="option1"></span></label>
-		<label class="option"><input type="checkbox" name="option" value="1" /><span id="option2"></span></label>
-		<label class="option"><input type="checkbox" name="option" value="2" /><span id="option3"></span></label>
-		<label class="option"><input type="checkbox" name="option" value="3" /><span id="option4"></span></label>
-		<label class="option"><input type="checkbox" name="option" value="4" /><span id="option5"></span></label>
-		<label class="option"><input type="checkbox" name="option" value="5" /><span id="option6"></span></label>
-		<label class="option"><input type="checkbox" name="option" value="6" /><span id="option7"></span></label>
-		<label class="option"><input type="checkbox" name="option" value="7" /><span id="option8"></span></label>
-		<label class="option"><input type="checkbox" name="option" value="8" /><span id="option9"></span></label>
-		<label class="option"><input type="checkbox" name="option" value="9" /><span id="option10"></span></label>
-		<label class="option"><input type="checkbox" name="option" value="10" /><span id="option11"></span></label>
-		<label class="option"><input type="checkbox" name="option" value="11" /><span id="option12"></span></label>
-		<label class="option"><input type="checkbox" name="option" value="12" /><span id="option13"></span></label>
-		<label class="option"><input type="checkbox" name="option" value="13" /><span id="option14"></span></label>
-		<label class="option"><input type="checkbox" name="option" value="14" /><span id="option15"></span></label>
-		<label class="option"><input type="checkbox" name="option" value="15" /><span id="option16"></span></label>
-		<label class="option"><input type="radio" name="option" value="1" /><span id="radio1"></span></label>
-		<label class="option"><input type="radio" name="option" value="2" /><span id="radio2"></span></label>
-		<label class="option"><input type="radio" name="option" value="3" /><span id="radio3"></span></label>
-		<label class="option"><input type="radio" name="option" value="4" /><span id="radio4"></span></label>
-		<label class="option"><input type="radio" name="option" value="5" /><span id="radio5"></span></label>
+		
+		<label class="option"><input type="checkbox" value="0" /><span id="option1"></span></label>
+		<label class="option"><input type="checkbox" value="1" /><span id="option2"></span></label>
+		<label class="option"><input type="checkbox" value="2" /><span id="option3"></span></label>
+		<label class="option"><input type="checkbox" value="3" /><span id="option4"></span></label>
+		<label class="option"><input type="checkbox" value="4" /><span id="option5"></span></label>
+		<label class="option"><input type="checkbox" value="5" /><span id="option6"></span></label>
+		<label class="option"><input type="checkbox" value="6" /><span id="option7"></span></label>
+		<label class="option"><input type="checkbox" value="7" /><span id="option8"></span></label>
+		<label class="option"><input type="checkbox" value="8" /><span id="option9"></span></label>
+		<label class="option"><input type="checkbox" value="9" /><span id="option10"></span></label>
+		<label class="option"><input type="checkbox" value="10" /><span id="option11"></span></label>
+		<label class="option"><input type="checkbox" value="11" /><span id="option12"></span></label>
+		<label class="option"><input type="checkbox" value="12" /><span id="option13"></span></label>
+		<label class="option"><input type="checkbox" value="13" /><span id="option14"></span></label>
+		<label class="option"><input type="checkbox" value="14" /><span id="option15"></span></label>
+		<label class="option"><input type="checkbox" value="15" /><span id="option16"></span></label>
+		
+		<label class="option"><input type="radio" value="1" /><span id="radio1"></span></label>
+		<label class="option"><input type="radio" value="2" /><span id="radio2"></span></label>
+		<label class="option"><input type="radio" value="3" /><span id="radio3"></span></label>
+		<label class="option"><input type="radio" value="4" /><span id="radio4"></span></label>
+		<label class="option"><input type="radio" value="5" /><span id="radio5"></span></label>
+		
 		<button id="next" onclick="nextques();">Nästa Fråga</button>
 	</div>
-	<div id="intro"><p>Välkommen till nämnd*kompassen! Är du sugen på att göra något, men vet inte riktigt vad? Kryssa för alla alternativ du håller med om och se vilken nämnd* du matchas mot.</p><p id="footnote">* samt övrig grupp i Fysiksektionen (som styrelsen och revisorerna)</p><button id="next" onclick="startquiz();">Ta quizzet</button></div>
 	
-	<div id="result" style="display:none">
-	</div>
+	<div id="intro">
+	    <p>Välkommen till nämnd*kompassen! Är du sugen på att göra något, men vet inte riktigt vad? Kryssa för alla alternativ du håller med om och se vilken nämnd* du matchas mot.</p>
+	    <p id="footnote">* samt övrig grupp i Fysiksektionen (som styrelsen och revisorerna)</p>
+	    <button id="next" onclick="startquiz();">Ta quizzet</button>
+	</diV>
+	
+	<div id="result" style="display:none"></div>
 		
 	<script type="text/javascript" src="questions.js"></script>
 	<script type="text/javascript" src="main.js"></script>
-    
 	
 </body>
 </html>
