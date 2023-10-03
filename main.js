@@ -13,7 +13,7 @@ var do_radio;
 const N_resultat = 5;
 
 // Text som står efter resultatet
-const sluttext = '<br>Sugen på att veta mer om någon nämnd*? Kolla <a href="https://docs.google.com/document/d/1gP65qTX5yvGZpYiMBMD_K9XyRCzFmDqCV0N7Uzu-Vdg/edit?usp=sharing", target="_blank">här</a>';
+const sluttext = '<br>Sugen på att veta mer om någon nämnd*? Kolla <a href="https://docs.google.com/document/d/1G6eUP2_dx3uXntELaNVc5sOe7suIJIfrBQyOWau2FEw/edit?usp=sharing", target="_blank">här</a>';
 
 // Ta fram listor med alla label element som har inputs -- alltså alla med id=option[N]
 var opt_checkbox = new Array(N_ques);
